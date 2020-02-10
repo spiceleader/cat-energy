@@ -6,6 +6,8 @@ Project based on this [Gulp template](https://github.com/spiceleader/startup-gul
 
 Code by: [Rostyslav Miniukov](https://github.com/spiceleader/)
 
+[Project Demo](https://spiceleader.github.io/pognali/)
+
 ---
 
 ## Usage
@@ -24,7 +26,7 @@ Code by: [Rostyslav Miniukov](https://github.com/spiceleader/)
 
 ---
 
-## Template Structure
+## Project Structure
 
 ```bash
 .
