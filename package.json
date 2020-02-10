@@ -1,5 +1,5 @@
 {
-  "name": "pognali",
+  "name": "cat-energy",
   "version": "1.0.0",
   "description": "Studying project to polish my skills",
   "main": "gulpfile.js",
@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/spiceleader/pognali.git"
+    "url": "git+ssh://git@github.com/spiceleader/cat-energy.git"
   },
   "author": "Rostyslav Miniukov <miniukovrostyslav@gmail.com> (https://github.com/spiceleader)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/spiceleader/pognali/issues"
+    "url": "https://github.com/spiceleader/cat-energy/issues"
   },
-  "homepage": "https://github.com/spiceleader/pognali#readme",
+  "homepage": "https://github.com/spiceleader/cat-energy#readme",
   "devDependencies": {
     "@babel/core": "^7.8.4",
     "@babel/preset-env": "^7.8.4",
