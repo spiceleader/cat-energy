@@ -3,7 +3,6 @@
 
 html {
   box-sizing: border-box;
-  font-family: font-family(opensans);
 }
 
 *,
@@ -14,6 +13,17 @@ html {
 
 body {
   margin: 0;
+  font-family: font-family(arial);
+  font-size: font-size(base-m);
+  font-style: normal;
+  line-height: line-height(base-m);
+  background-color: $white;
+  color: $font-color-base;
+
+  @media ($tablet) {
+    font-size: font-size(base-t);
+    line-height: line-height(base-t);
+  }
 }
 
 img {

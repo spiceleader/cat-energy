@@ -2,7 +2,7 @@
 $mobile-width: 320px;
 $mobile-l-width: 425px;
 $tablet-width: 768px;
-$desktop-width: 1150px;
+$desktop-width: 1300px;
 
 $mobile-l-max-width: ($tablet-width - 1);
 
@@ -19,67 +19,129 @@ $retina: "min-resolution: #{$retina-dpi}";
 
 // Padding Variables
 $paddings: (
-  container-m: 0 30px,
-  container-t: 0 50px,
-  container-d: 0 50px,
+  container-m: 0 20px,
+  container-t: 0 30px,
+  container-d: 0 40px,
 );
 
 // Font Variables
+// Stack
 $font-stack: (
-  opensans: ("Open Sans", tahoma, arial, sans-serif),
+  oswald: (oswald, arial, sans-serif),
+  arial: (arial, tahoma, sans-serif),
 );
 
+// Weights
 $font-weights: (
-  normal: 400,
   regular: 400,
+  medium: 500,
 );
 
-$line-height-base: 24px;
+// Line Heights
+$line-height-xxs: 12px;
+$line-height-xs: 14px;
+$line-height-s: 16px;
+$line-height-sm: 18px;
+$line-height-m: 20px;
+$line-height-xm: 24px;
+$line-height-l: 36px;
+$line-height-xl: 37px;
+$line-height-xxl: 60px;
 
 $font-line-height: (
-  base: $line-height-base,
+  base-m: $line-height-sm,
+  base-t: $line-height-xm,
+  page-title-m: $line-height-l,
+  page-title-t: $line-height-xxl,
+  section-title-m: $line-height-xxl,
+  section-title-t: $line-height-xxl,
+  link-m: $line-height-s,
+  link-t: $line-height-m,
+  menu-m: $line-height-m,
+  menu-t: $line-height-xm,
+  menu-d: $line-height-xm,
+  button-m: $line-height-sm,
+  button-t: $line-height-m,
+  label-m: $line-height-sm,
+  label-t: $line-height-m,
+  strong-m: $line-height-xm,
+  strong-t: $line-height-xl,
+  light-m: $line-height-xxs,
+  light-t: $line-height-xs,
 );
 
-$font-size-base: 15px;
+// Font Sizes
+$font-size-xxs: 12px;
+$font-size-xs: 14px;
+$font-size-s: 16px;
+$font-size-sm: 18px;
+$font-size-m: 20px;
+$font-size-xm: 24px;
+$font-size-l: 30px;
+$font-size-xl: 36px;
+$font-size-xxl: 60px;
 
 $font-sizes: (
-  base: $font-size-base,
+  base-m: $font-size-xs,
+  base-t: $font-size-s,
+  page-title-m: $font-size-xl,
+  page-title-t: $font-size-xxl,
+  section-title-m: $font-size-xl,
+  section-title-t: $font-size-xxl,
+  link-m: $font-size-s,
+  link-t: $font-size-m,
+  menu-m: $font-size-m,
+  menu-t: $font-size-sm,
+  menu-d: $font-size-m,
+  button-m: $font-size-xs,
+  button-t: $font-size-m,
+  label-m: $font-size-s,
+  label-t: $font-size-m,
+  strong-m: $font-size-xm,
+  strong-t: $font-size-l,
+  light-m: $font-size-xxs,
+  light-t: $font-size-xs,
 );
 
 // Color Variables
 $black: #000000;
 $white: #ffffff;
+
+$green-primary: #68b738;
+$green-primary--hover: #5eaa2f;
+
 $gray-primary: #444444;
-$gray-secondary: #f1f1f1;
-$green-primary: #63d1bb;
-$green-primary--hover: #59d5bc;
-$green-secondary: #56c3b2;
-$green-secondary--hover: #46c1ae;
+$gray-secondary: #f2f2f2;
 
 $bg-color-body: $white;
-$bg-color-button: $white;
-$bg-color-button--hover: $gray-primary;
-$bg-color-button--active: $gray-primary;
 $bg-color-footer: $gray-secondary;
-$bg-color-icon: fade($black, 20%);
-$bg-color-promo: #f9f9f9;
-$bg-color-separate: #ececec;
+$bg-color-separate: #d9d9d9;
 
-$border-color-button: $gray-primary;
-$border-color-input: $gray-primary;
-$border-color-input--hover: #62d1ba;
-$border-color-input--active: fade($border-color-input, 30%);
-$border-color-modal: #c6c6c6;
+$button-primary: $green-primary;
+$button-primary--hover: $green-primary--hover;
+
+$button-secondary: $gray-secondary;
+$button-secondary--hover: #ebebeb;
+
+$bg-color-icon: #666666;
+$bg-color-icon--hover: $green-primary;
+
+$border-color-input: #e7e7e7;
+$border-color-input--hover: #cdcdcd;
+$border-color-input--active: $gray-primary;
+$border-color-input--error: #ff8282;
 
 $font-color-base: $gray-primary;
-$font-color-button: $font-color-base;
+
+$font-color-button: $white;
 $font-color-button--hover: $white;
-$font-color-button--active: fade($font-color-button--hover, 30%);
-$font-color-heading: $black;
-$font-color-label: $black;
-$font-color-legend: $green-primary;
-$font-color-mail: $green-secondary--hover;
-$font-color-menu: $black;
-$font-color-menu--hover: fade($font-color-menu, 60%);
-$font-color-menu--active: fade($font-color-menu, 30%);
-$font-color-section-title: $black;
+$font-color-button--active: fade($white, 30%);
+
+$font-color-heading: #111111;
+$font-color-heading--index: $white;
+
+$font-color-label: #222222;
+
+$font-color-menu--mobile: $font-color-heading;
+$font-color-menu--tablet: $font-color-label;
+$font-color-menu--desktop: $white;
