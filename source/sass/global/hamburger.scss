@@ -1,0 +1,53 @@
+.hamburger {
+  position: absolute;
+  top: 24px;
+  right: 20px;
+  display: block;
+  width: 24px;
+  height: 18px;
+
+  &--bar {
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    border-radius: 2px;
+    width: 100%;
+    height: 2px;
+    background-color: $black;
+    transition: 0.2s transform linear, 0.2s top linear 0.2s, 0.2s opacity linear;
+
+    &:nth-child(1) {
+      top: 0;
+    }
+
+    &:nth-child(2) {
+      top: 8px;
+    }
+
+    &:nth-child(3) {
+      top: 16px;
+    }
+  }
+}
+
+.site-nav__toggle--opened {
+  .hamburger {
+    &--bar {
+      transition: 0.2s transform linear 0.2s, 0.2s top linear, 0.2s opacity linear;
+
+      &:nth-child(1) {
+        top: 8px;
+        transform: rotate(45deg);
+      }
+
+      &:nth-child(2) {
+        opacity: 0;
+      }
+
+      &:nth-child(3) {
+        top: 8px;
+        transform: rotate(-45deg);
+      }
+    }
+  }
+}
