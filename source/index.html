@@ -11,6 +11,7 @@
 
 <body class="page">
 
+  <!-- Site main Header -->
   <header class="main-header" id="main-header">
     <div class="container">
       <nav class="site-nav">
@@ -46,6 +47,39 @@
       </nav>
     </div>
   </header>
+  <!-- End of Main Header  -->
+
+  <!-- Main Content -->
+  <main class="main-content" id="main-content">
+    <h1 class="visually-hidden">Интернет-магазин питания для котиков Cat Energy</h1>
+
+    <section class="promo" id="promo">
+      <div class="container">
+        <div class="promo__title-wrapper">
+          <h2 class="promo__title">Функциональное питание для котов</h2>
+          <b class="promo__tagline">Занялся собой? Займись котом!</b>
+        </div>
+        <div class="promo__image-wrapper">
+          <picture>
+            <source type="image/webp" media="(min-width: 1300px)"
+              srcset="img/content/index-can-desktop@1x.webp 1x, img/content/index-can-desktop@2x.webp 2x">
+            <source media="(min-width: 1300px)"
+              srcset="img/content/index-can-desktop@1x.jpg 1x, img/content/index-can-desktop@2x.jpg 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/content/index-can-tablet@1x.webp 1x, img/content/index-can-tablet@2x.webp 2x">
+            <source media="(min-width: 768px)"
+              srcset="img/content/index-can-tablet@1x.jpg 1x, img/content/index-can-tablet@2x.jpg 2x">
+            <source type="image/webp"
+              srcset="img/content/index-can-mobile@1x.webp 1x, img/content/index-can-mobile@2x.webp 2x">
+            <img class="promo__image" src="img/content/index-can-mobile@1x.png"
+              srcset="img/content/index-can-mobile@2x.png 2x" alt="Корм для кошек «Cat Energy Pro» со вкусом курицы">
+          </picture>
+        </div>
+        <a href="form.html" class="promo__button button--primary button">Подобрать программу</a>
+      </div>
+    </section>
+  </main>
+  <!-- End of Main Content -->
 
   <script src="js/svg4everybody.min.js"></script>
   <script src="js/picturefill.min.js"></script>
