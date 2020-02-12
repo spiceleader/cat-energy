@@ -96,7 +96,7 @@
                 Slim поможет вашему питомцу сбросить лишний вес.
               </p>
             </div>
-            <a href="catalog.html" class="programs__link">Каталог Slim</a>
+            <a class="programs__link" href="catalog.html">Каталог Slim</a>
           </article>
           <!-- End of Program Card -->
           <!-- Program Card -->
@@ -109,7 +109,7 @@
                 нарастить необходимые мышцы!
               </p>
             </div>
-            <a href="catalog.html" class="programs__link">Каталог Pro</a>
+            <a class="programs__link" href="catalog.html">Каталог Pro</a>
           </article>
           <!-- End of Program Card -->
         </div>
@@ -142,6 +142,89 @@
       </div>
     </section>
     <!-- End of About section -->
+
+    <!-- Example section -->
+    <section class="example" id="example">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-header__title">Живой пример</h2>
+        </header>
+        <div class="example--wrapper">
+          <div class="example__text-inner">
+            <p class="example__text">
+              Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim. Отличный результат
+              без изнуряющих тренировок! При этом он не менял своих привычек и по-прежнему спит по 16 часов в день.
+            </p>
+            <table class="example__stats">
+              <thead class="visually-hidden">
+                <tr>
+                  <th>Статистика ваших усилий</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="example__stats-item">
+                  <td class="example__stats-value">5 кг</td>
+                  <td class="example__stats-def">снижение веса</td>
+                </tr>
+                <tr class="example__stats-item">
+                  <td class="example__stats-value">60 дней</td>
+                  <td class="example__stats-def">затрачено времени</td>
+                </tr>
+              </tbody>
+            </table>
+            <b class="example__cost">
+              Затраты на питание: <span class="example__cost--value">15 000</span> руб.
+            </b>
+          </div>
+          <div class="example__compare-inner">
+
+            <!-- Compare Images Block -->
+            <div class="img-comp-img compare__image">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)"
+                  srcset="img/content/after@1x.webp 1x, img/content/after@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/content/after@1x.png 1x, img/content/after@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/content/after@1x.webp 1x, img/content/after@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/content/after@1x.png 1x, img/content/after@2x.png 2x">
+                <source type="image/webp"
+                  srcset="img/content/after-mobile@1x.webp 1x, img/content/after-mobile@2x.webp 2x">
+                <img class="promo__image" src="img/content/after-mobile@1x.png"
+                  srcset="img/content/after-mobile@2x.png 2x" alt="Котик после пройденого курса">
+              </picture>
+            </div>
+            <div class="img-comp-img img-comp-overlay сompare__image compare__overlay">
+              <picture>
+                <source type="image/webp" media="(min-width: 1300px)"
+                  srcset="img/content/before@1x.webp 1x, img/content/before@2x.webp 2x">
+                <source media="(min-width: 1300px)" srcset="img/content/before@1x.png 1x, img/content/before@2x.png 2x">
+                <source type="image/webp" media="(min-width: 768px)"
+                  srcset="img/content/before@1x.webp 1x, img/content/before@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/content/before@1x.png 1x, img/content/before@2x.png 2x">
+                <source type="image/webp"
+                  srcset="img/content/before-mobile@1x.webp 1x, img/content/before-mobile@2x.webp 2x">
+                <img class="promo__image" src="img/content/before-mobile@1x.png"
+                  srcset="img/content/before-mobile@2x.png 2x" alt="Котик до прохождения курса">
+              </picture>
+            </div>
+            <div class="compare__controls">
+              <button class="compare__controls--before">Было</button>
+              <div class="compare__controls-slider-field">
+                <div class="compare__controls-slider-filled">
+                </div>
+              </div>
+              <div class="compare__controls-slider">
+                <span class="compare__controls-slider--inner"></span>
+              </div>
+              <button class="compare__controls--after">Стало</button>
+            </div>
+            <!-- End of Compare Images Block -->
+
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Example section -->
 
   </main>
   <!-- End of Main Content -->
