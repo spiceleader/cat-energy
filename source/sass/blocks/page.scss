@@ -9,6 +9,16 @@
   color: $font-color-base;
   min-width: $mobile-width;
 
+  &--no-js {
+    .site-nav__toggle {
+      display: none;
+    }
+
+    .site-nav__list--closed {
+      display: flex;
+    }
+  }
+
   @media ($tablet) {
     font-size: font-size(base-t);
     line-height: font-lh(base-t);
