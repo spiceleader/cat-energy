@@ -189,7 +189,7 @@
                 <source media="(min-width: 768px)" srcset="img/content/after@1x.png 1x, img/content/after@2x.png 2x">
                 <source type="image/webp"
                   srcset="img/content/after-mobile@1x.webp 1x, img/content/after-mobile@2x.webp 2x">
-                <img class="promo__image" src="img/content/after-mobile@1x.png"
+                <img class="example__compare-image example__compare-image--after" src="img/content/after-mobile@1x.png"
                   srcset="img/content/after-mobile@2x.png 2x" alt="Котик после пройденого курса">
               </picture>
             </div>
@@ -203,8 +203,9 @@
                 <source media="(min-width: 768px)" srcset="img/content/before@1x.png 1x, img/content/before@2x.png 2x">
                 <source type="image/webp"
                   srcset="img/content/before-mobile@1x.webp 1x, img/content/before-mobile@2x.webp 2x">
-                <img class="promo__image" src="img/content/before-mobile@1x.png"
-                  srcset="img/content/before-mobile@2x.png 2x" alt="Котик до прохождения курса">
+                <img class="example__compare-image example__compare-image--before"
+                  src="img/content/before-mobile@1x.png" srcset="img/content/before-mobile@2x.png 2x"
+                  alt="Котик до прохождения курса">
               </picture>
             </div>
             <div class="compare__controls">
@@ -229,10 +230,99 @@
   </main>
   <!-- End of Main Content -->
 
+  <!-- Site Footer -->
+  <footer class="main-footer" id="main-footer">
+    <div class="container">
+      <!-- Contact section -->
+      <section class="contact">
+        <div class="contact--inner">
+          <h2 class="visually-hidden">Наши контакты</h2>
+          <p class="contact__invite">
+            Приглашаем к сотрудничеству дилеров!
+          </p>
+          <address class="contact__address">
+            ул. Большая Конюшенная, д. 19/8<br>
+            Санкт-Петербург
+          </address>
+        </div>
+      </section>
+      <!-- End of Contact section -->
+    </div>
+
+    <!-- Map section -->
+    <section class="map">
+      <h2 class="visually-hidden">Как нас найти на карте</h2>
+      <div class="map__image-wrapper">
+        <picture>
+          <source type="image/webp" media="(min-width: 1300px)"
+            srcset="img/content/bg-map-desktop@1x.webp 1x, img/content/bg-map-desktop@2x.webp 2x">
+          <source media="(min-width: 1300px)"
+            srcset="img/content/bg-map-desktop@1x.png 1x, img/content/bg-map-desktop@2x.png 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/content/bg-map-tablet@1x.webp 1x, img/content/bg-map-tablet@2x.webp 2x">
+          <source media="(min-width: 768px)"
+            srcset="img/content/bg-map-tablet@1x.png 1x, img/content/bg-map-tablet@2x.png 2x">
+          <source type="image/webp" srcset="img/content/bg-map-mobile@1x.webp 1x, img/content/bg-map-mobile@2x.webp 2x">
+          <img class="map__image" src="img/content/bg-map-mobile@1x.png" srcset="img/content/bg-map-mobile@2x.png 2x"
+            alt="Карта с месторасположением нашего офиса">
+        </picture>
+      </div>
+    </section>
+    <!-- End of Map section -->
+
+    <!-- Actual Footer -->
+    <section class="site-footer" id="site-footer">
+      <div class="container">
+        <div class="site-footer__inner">
+          <div class="site-footer__logo-wrapper">
+            <a href="index.html" class="site-footer__logo-link" aria-label="На главную">
+              <img src="img/logo-mobile-text.svg" alt="Текстовый логотип магазина «Cat Energy»"
+                class="site-footer__logo" width="128" height="24">
+            </a>
+          </div>
+          <ul class="site-footer__socials socials__list">
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <svg class="socials__svg" width="22" height="12">
+                  <use xlink:href="img/sprite.svg#icon-vk"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <svg class="socials__svg" width="16" height="16">
+                  <use xlink:href="img/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="socials__item">
+              <a href="#" class="socials__link">
+                <svg class="socials__svg" width="10" height="19">
+                  <use xlink:href="img/sprite.svg#icon-fb"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <div class="site-footer__developer">
+            <p class="site-footer__developer-text">HTML Academy</p>
+            <svg class="site-footer__developer-logo" width="27" height="34">
+              <use xlink:href="img/sprite.svg#icon-htmlacademy"></use>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- End of Actual Footer -->
+
+  </footer>
+  <!-- End of Site Footer -->
+
+  <!-- Scripts Goes Below -->
   <script src="js/svg4everybody.min.js"></script>
   <script src="js/picturefill.min.js"></script>
   <script src="js/polyfill.min.js"></script>
   <script src="js/main.min.js"></script>
+  <!-- End of Scripts -->
 </body>
 
 </html>
