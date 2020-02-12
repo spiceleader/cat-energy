@@ -9,31 +9,34 @@
   <title>Cat Energy | Питание для энергичных котиков</title>
 </head>
 
-<body class="page">
+<body class="page page--no-js">
 
   <!-- Site main Header -->
   <header class="main-header" id="main-header">
     <div class="container">
       <nav class="site-nav">
-        <a class="site-nav__logo-link" href="index.html">
-          <div class="site-nav__logo-wrapper">
+        <div class="site-nav__logo-wrapper">
+          <a class="site-nav__logo-link" href="index.html">
             <picture>
               <source media="(min-width: 1300px)" srcset="img/logo-desktop.svg" type="image/svg+xml">
               <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" type="image/svg+xml">
-              <img class="site-nav__logo" src="img/logo-mobile.svg" alt="Логотип магазина Кет Енерджи">
+              <img class="site-nav__logo" src="img/logo-mobile.svg" alt="Логотип магазина Кет Енерджи" width="33"
+                height="38">
             </picture>
-            <img class="site-nav__logo--text" src="img/logo-mobile-text.svg" alt="Красивая надпись Кет Енерджи"
-              width="101" height="18">
-          </div>
-        </a>
-        <button class="site-nav__toggle" type="button" aria-label="Открыть меню">
-          <span class="site-nav__hamburger">
-            <span class="site-nav__hamburger--bar"></span>
-            <span class="site-nav__hamburger--bar"></span>
-            <span class="site-nav__hamburger--bar"></span>
-          </span>
-        </button>
-        <ul class="site-nav__list">
+          </a>
+          <a class="site-nav__logo-link" href="index.html">
+            <img class="site-nav__logo site-nav__logo--text" src="img/logo-mobile-text.svg"
+              alt="Красивая надпись Кет Енерджи" width="101" height="18">
+          </a>
+          <button class="site-nav__toggle" type="button" aria-label="Открыть меню">
+            <span class="site-nav__hamburger hamburger">
+              <span class="hamburger--bar"></span>
+              <span class="hamburger--bar"></span>
+              <span class="hamburger--bar"></span>
+            </span>
+          </button>
+        </div>
+        <ul class="site-nav__list site-nav__list--closed">
           <li class="site-nav__item">
             <a class="site-nav__item-link site-nav__item-link--current" href="index.html">Главная</a>
           </li>
@@ -276,28 +279,28 @@
       <div class="container">
         <div class="site-footer__inner">
           <div class="site-footer__logo-wrapper">
-            <a href="index.html" class="site-footer__logo-link" aria-label="На главную">
-              <img src="img/logo-mobile-text.svg" alt="Текстовый логотип магазина «Cat Energy»"
-                class="site-footer__logo" width="128" height="24">
+            <a class="site-footer__logo-link" href="index.html" aria-label="На главную">
+              <img class="site-footer__logo" src="img/logo-mobile-text.svg"
+                alt="Текстовый логотип магазина «Cat Energy»" width="128" height="24">
             </a>
           </div>
           <ul class="site-footer__socials socials__list">
             <li class="socials__item">
-              <a href="#" class="socials__link">
+              <a class="socials__link" href="#">
                 <svg class="socials__svg" width="22" height="12">
                   <use xlink:href="img/sprite.svg#icon-vk"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <a href="#" class="socials__link">
+              <a class="socials__link" href="#">
                 <svg class="socials__svg" width="16" height="16">
                   <use xlink:href="img/sprite.svg#icon-instagram"></use>
                 </svg>
               </a>
             </li>
             <li class="socials__item">
-              <a href="#" class="socials__link">
+              <a class="socials__link" href="#">
                 <svg class="socials__svg" width="10" height="19">
                   <use xlink:href="img/sprite.svg#icon-fb"></use>
                 </svg>
