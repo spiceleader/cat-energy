@@ -1,0 +1,50 @@
+.button {
+  display: inline-block;
+  margin: 0;
+  padding: 12px 0 10px;
+  cursor: pointer;
+  border: none;
+  text-transform: uppercase;
+  text-decoration: none;
+  min-width: 245px;
+  text-align: center;
+  font-family: font-family(oswald);
+  font-size: font-size(button-m);
+  line-height: font-lh(button-m);
+
+  @media ($tablet) {
+    font-size: font-size(button-t);
+    line-height: font-lh(button-t);
+    padding: 17px 0 15px;
+  }
+
+  &--primary {
+    color: $font-color-button;
+    background-color: $button-primary;
+
+    &:hover,
+    &:focus {
+      color: $font-color-button--hover;
+      background-color: $button-primary--hover;
+    }
+
+    &:active {
+      color: $font-color-button--active;
+    }
+  }
+
+  &--secondary {
+    color: $font-color-button--secondary;
+    background-color: $button-secondary;
+
+    &:hover,
+    &:focus {
+      color: $font-color-button--secondary-hover;
+      background-color: $button-secondary--hover;
+    }
+
+    &:active {
+      color: $font-color-button--secondary-active;
+    }
+  }
+}
