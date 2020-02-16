@@ -2,10 +2,6 @@
   margin: 0;
   padding: 0;
   max-width: $desktop-width;
-
-  @media ($tablet) {
-    margin-top: 25px;
-  }
 }
 
 .section-header__title {
