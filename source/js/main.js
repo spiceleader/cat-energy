@@ -1,7 +1,7 @@
 'use strict';
 
 // Picture element HTML5 shiv
-document.createElement("picture"); // eslint-disable-line
+document.createElement('picture'); // eslint-disable-line
 
 // Shadow SVG for IE11
 svg4everybody(); // eslint-disable-line
@@ -23,3 +23,117 @@ if (toggleButton) {
     this.classList.toggle('site-nav__toggle--opened');
   });
 }
+
+// Image Compare
+(function () {
+
+  // Defining variables
+  let controls = document.querySelector('.compare__controls');
+  let buttonBefore = controls.querySelector('.compare__controls--before');
+  let buttonAfter = controls.querySelector('.compare__controls--after');
+  let sliderField = controls.querySelector('.compare__controls-slider-field');
+  let slider = controls.querySelector('.compare__controls-slider');
+  let slideWrapper = document.querySelector('.compare__wrapper');
+  let slideBefore = slideWrapper.querySelector('.compare__image-before');
+  let slideAfter = slideWrapper.querySelector('.compare__image-after');
+  let sliderWidth,
+    fieldWidth;
+
+  // Getting width of elements
+  let getWidth = function (element) {
+    return parseInt(getComputedStyle(element).width, 10);
+  };
+
+  // Changing slide width on before button click
+  buttonBefore.onclick = function (event) {
+    event.preventDefault();
+    slideBefore.style.width = '100%';
+    slideAfter.style.width = '0';
+    slider.style.left = '0';
+  };
+
+  // Changing slide width on after button click
+  buttonAfter.onclick = function (event) {
+    event.preventDefault();
+    slideBefore.style.width = '0';
+    slideAfter.style.width = '100%';
+    slider.style.left = fieldWidth - sliderWidth + 'px';
+  };
+
+  // Moving slider to center and setting images width to 50% on double click
+  slider.ondblclick = function () {
+    slideBefore.style.width = '50%';
+    slideAfter.style.width = '50%';
+    slider.style.left = (fieldWidth - sliderWidth) / 2 + 'px';
+  };
+
+  // Getting coordinates from the left brink of element  to window left edge
+  let getCords = function (element) {
+    return element.getBoundingClientRect().left + pageXOffset;
+  };
+
+  // Setting up slider
+  let sliderHandler = function (eDown) {
+
+    let sliderCords = getCords(slider);
+    let fieldCords = getCords(sliderField);
+
+    let shiftX = eDown.pageX - sliderCords;
+
+    document.onmousemove = function (eMove) {
+      let sliding = eMove.pageX - shiftX - fieldCords;
+
+      if (sliding < 0) {
+        sliding = 0;
+      }
+
+      let sliderOffset = fieldWidth - sliderWidth;
+
+      if (sliding > sliderOffset) {
+        sliding = sliderOffset;
+      }
+
+      let sliderValue = sliding / sliderOffset * 100;
+      slider.style.left = sliding + 'px';
+
+      slideBefore.style.width = (100 - sliderValue) + '%';
+      slideAfter.style.width = sliderValue + '%';
+    };
+    document.onmouseup = function () {
+      document.onmousemove = document.onmouseup = null;
+    };
+    return false;
+  };
+
+  // Adding slider events
+  let addSlider = function () {
+    slider.addEventListener('mousedown', sliderHandler);
+  };
+
+  // Removing slider events
+  let removeSlider = function () {
+    slider.removeEventListener('mousedown', sliderHandler);
+  };
+
+  // Initializing slider function
+  function sliderInit() {
+    let viewport = document.documentElement.clientWidth || window.innerWidth;
+
+    if (viewport >= 768) {
+      addSlider();
+    } else {
+      removeSlider();
+    }
+
+    sliderWidth = getWidth(slider);
+    fieldWidth = getWidth(sliderField);
+
+    slideBefore.style.width = '';
+    slideAfter.style.width = '';
+    slider.style.left = '';
+  }
+
+  // Calling function on page load and window resize
+  window.addEventListener('load', sliderInit);
+  window.addEventListener('resize', sliderInit);
+})();
