@@ -6,13 +6,27 @@
   list-style: none;
 }
 
+// Visually Hidden
+@mixin visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
 // Drop Shadow
 @mixin box-shadow($x: 0, $y: 0, $blur: 0, $dist: 0, $color: $black, $opacity: 0, $inset: false) {
   @if $inset == true {
-    box-shadow: inset $x $y $blur $dist fade($color, $opacity);
+    box-shadow: inset $x $y $blur $dist rgba($color, $opacity);
   }
   @else {
-    box-shadow: $x $y $blur $dist fade($color, $opacity);
+    box-shadow: $x $y $blur $dist rgba($color, $opacity);
   }
 }
 
