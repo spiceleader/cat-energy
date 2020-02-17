@@ -165,14 +165,29 @@
     color: rgba($font-color-menu--mobile, 0.3);
   }
 
+  &--current {
+    &:hover,
+    &:focus,
+    &:active {
+      color: $font-color-menu--mobile;
+    }
+  }
+
   @media ($tablet) {
     font-size: font-size(menu-t);
     line-height: font-lh(menu-t);
     font-weight: font-weight(regular);
     padding: 14px 18px;
+    color: $font-color-menu--tablet;
 
     &--current {
       position: relative;
+
+      &:hover,
+      &:focus,
+      &:active {
+        color: $font-color-menu--tablet;
+      }
 
       &::after {
         content: "";
@@ -203,9 +218,21 @@
     }
 
     &--current {
+      &:hover,
+      &:focus,
+      &:active {
+        color: $white;
+      }
+
       &::after {
         background-color: $white;
       }
     }
+  }
+}
+
+a:not([href]) {
+  .site-nav__logo {
+    opacity: 1;
   }
 }

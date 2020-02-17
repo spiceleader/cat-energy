@@ -24,4 +24,15 @@ a {
   text-decoration: none;
 }
 
+a:not([href]) {
+  opacity: 1;
+  cursor: default;
+
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
+  }
+}
+
 /* stylelint-enable */
