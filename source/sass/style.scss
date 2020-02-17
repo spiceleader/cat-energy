@@ -12,6 +12,7 @@
 @import "global/container";
 @import "global/layout";
 @import "global/main-header";
+@import "global/main-footer";
 @import "global/section-header";
 
 /* === Function Elements === */
@@ -26,3 +27,7 @@
 @import "blocks/about";
 @import "blocks/example";
 @import "blocks/compare";
+
+// Main Footer sections
+@import "blocks/contact";
+@import "blocks/map";
