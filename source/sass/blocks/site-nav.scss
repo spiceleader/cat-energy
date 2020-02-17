@@ -117,6 +117,33 @@
     justify-content: flex-end;
     flex-flow: row wrap;
     flex-basis: 50%;
+
+    &--index {
+      .site-nav__item-link {
+        color: $white;
+
+        &:hover,
+        &:focus {
+          color: rgba($white, 0.6);
+        }
+
+        &:active {
+          color: rgba($white, 0.3);
+        }
+
+        &--current {
+          &:hover,
+          &:focus,
+          &:active {
+            color: $white;
+          }
+
+          &::after {
+            background-color: $white;
+          }
+        }
+      }
+    }
   }
 }
 
@@ -140,6 +167,12 @@
     &:nth-of-type(3n) {
       .site-nav__item-link {
         padding-right: 0;
+
+        &--current {
+          &::after {
+            right: 0;
+          }
+        }
       }
     }
   }
@@ -205,27 +238,23 @@
   @media ($desktop) {
     font-size: font-size(menu-d);
     line-height: font-lh(menu-d);
-    color: $white;
+    color: $font-color-menu--mobile;
     padding: 14px 18px;
 
     &:hover,
     &:focus {
-      color: rgba($white, 0.6);
+      color: rgba($font-color-menu--mobile, 0.6);
     }
 
     &:active {
-      color: rgba($white, 0.3);
+      color: rgba($font-color-menu--mobile, 0.3);
     }
 
     &--current {
       &:hover,
       &:focus,
       &:active {
-        color: $white;
-      }
-
-      &::after {
-        background-color: $white;
+        color: $font-color-menu--mobile;
       }
     }
   }
