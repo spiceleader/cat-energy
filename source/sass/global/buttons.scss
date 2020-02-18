@@ -11,6 +11,7 @@
   font-family: font-family(oswald);
   font-size: font-size(button-m);
   line-height: font-lh(button-m);
+  transition: all 0.3s ease;
 
   @media ($tablet) {
     font-size: font-size(button-t);
