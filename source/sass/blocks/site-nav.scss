@@ -25,10 +25,25 @@
   min-height: 65px;
   flex-basis: 100%;
 
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    margin: 0 -20px;
+    background-color: $border-color-menu;
+  }
+
   @media ($tablet) {
     justify-content: flex-start;
     flex-basis: 25%;
     min-height: auto;
+
+    &::after {
+      content: none;
+    }
   }
 }
 
@@ -148,13 +163,9 @@
 }
 
 .site-nav__item {
-  border-top: 1px solid $border-color-menu;
+  border-bottom: 1px solid $border-color-menu;
   text-align: center;
   margin: 0 -20px;
-
-  &:last-of-type {
-    border-bottom: 1px solid $border-color-menu;
-  }
 
   @media ($tablet) {
     margin: 0;
