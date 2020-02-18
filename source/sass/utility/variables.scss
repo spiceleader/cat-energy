@@ -117,6 +117,7 @@ $bg-color-body: $white;
 $bg-color-footer: $gray-secondary;
 $bg-color-section: $gray-secondary;
 $bg-color-program-card: $gray-secondary;
+$bg-color-product-card: $gray-secondary;
 $bg-color-index-image: #64a83b;
 $bg-color-separate: #d9d9d9;
 
@@ -126,8 +127,12 @@ $button-primary--hover: $green-primary--hover;
 $button-secondary: $gray-secondary;
 $button-secondary--hover: #ebebeb;
 
+$bg-color-icon--plus: #d3d3d3;
+
 $bg-color-icon: #666666;
 $bg-color-icon--hover: $green-primary;
+
+$border-color-product: #ededed;
 
 $border-color-menu: #e6e6e6;
 $border-color-menu--current: $green-primary;
@@ -137,6 +142,7 @@ $border-color-input--active: $gray-primary;
 $border-color-input--error: #ff8282;
 
 $border-color-stats: #cdcdcd;
+$border-color-product--row: #cdcdcd;
 
 $font-color-base: $gray-primary;
 
