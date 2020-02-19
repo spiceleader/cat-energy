@@ -152,6 +152,10 @@
   width: 100%;
   font-size: font-size(link-m);
 
+  @media ($tablet) {
+    padding: 11px 0 9px;
+  }
+
   @media ($desktop) {
     min-width: unset;
   }
