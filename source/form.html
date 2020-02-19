@@ -54,6 +54,145 @@
 
   <!-- Main Content -->
   <main class="main-content" id="main-content">
+    <h1 class="visually-hidden">Подбор программы питания для вашего котика «Cat Energy»</h1>
+
+    <!-- Program Form section -->
+    <section class="program-form" id="program-form">
+      <div class="container">
+        <header class="section-header">
+          <h2 class="section-header__title">Подбор программы</h2>
+        </header>
+        <div class="program-form__wrapper">
+          <p class="program-form__intro">
+            Заполните анкету и мы подберем программу питания для вашего кота
+          </p>
+
+          <!-- Form Block -->
+          <form class="program-form__form" action="https://echo.htmlacademy.ru" method="post">
+
+            <!-- Cat Info Block -->
+            <fieldset class="program-form__fieldset">
+              <legend class="visually-hidden">Информация о вашем котике</legend>
+              <div class="program-form__fieldset-inner">
+                <div class="program-form__input-wrapper">
+                  <label class="program-form__label" for="cat-name">Имя:*</label>
+                  <input class="program-form__input program-form__input--text" type="text" id="cat-name" name="cat-name"
+                    placeholder="Барсик" required>
+                </div>
+                <div class="program-form__input-wrapper">
+                  <label class="program-form__label" for="cat-weight">Вес (кг):*</label>
+                  <input class="program-form__input program-form__input--number" type="number" id="cat-weight"
+                    name="cat-wieght" min="0" max="50" value="7" required>
+                </div>
+                <div class="program-form__input-wrapper">
+                  <label class="program-form__label" for="cat-age">Возраст (лет):</label>
+                  <input class="program-form__input program-form__input--age" type="number" id="cat-age" name="cat-age"
+                    min="0" max="20" value="7">
+                </div>
+              </div>
+            </fieldset>
+            <!-- End of Cat Info Block -->
+
+            <!-- Program Chooser Block -->
+            <fieldset class="program-form__fieldset">
+              <legend class="visually-hidden">Выбор программы питания</legend>
+              <div class="program-form__fieldset-inner">
+                <div class="program-form__input-wrapper">
+                  <input class="program-form__input program-form__input--radio" type="radio" id="program-losing"
+                    name="program" value="weight-loss" checked>
+                  <label class="program-form__label" for="program-losing">Похудение</label>
+                </div>
+                <div class="program-form__input-wrapper">
+                  <input class="program-form__input program-form__input--radio" type="radio" id="program-gain"
+                    name="program" value="weight-gain">
+                  <label class="program-form__label" for="program-gain">Набор массы</label>
+                </div>
+                <div class="program-form__input-wrapper">
+                  <input class="program-form__input program-form__input--radio" type="radio" id="program-dunno"
+                    name="program" value="dunno">
+                  <label class="program-form__label" for="program-dunno">Не знаю (Нужен ваш совет)</label>
+                </div>
+              </div>
+            </fieldset>
+            <!-- End of Program Chooser Block -->
+
+            <!-- User Contact Block -->
+            <fieldset class="program-form__fieldset">
+              <legend class="program-form__legend">Контактные данные (владельца кота)</legend>
+              <div class="program-form__fieldset-inner">
+                <div class="program-form__input-wrapper">
+                  <label class="program-form__label" for="user-email">E-mail:*</label>
+                  <input class="program-form__input program-form__input--text" type="email" id="user-email"
+                    name="user-email" placeholder="kuklachev@gmail.com" required>
+                  <svg class="program-form__svg program-form__svg--mail" width="17" height="13">
+                    <use xlink:href="img/sprite.svg#icon-mail"></use>
+                  </svg>
+                </div>
+                <div class="program-form__input-wrapper">
+                  <label class="program-form__label" for="user-phone">Телефон:*</label>
+                  <input class="program-form__input program-form__input--text" type="number" id="user-phone"
+                    name="user-phone" placeholder="8 (960) 900-60-90" required>
+                  <svg class="program-form__svg program-form__svg--phone" width="20" height="20">
+                    <use xlink:href="img/sprite.svg#icon-phone"></use>
+                  </svg>
+                </div>
+              </div>
+            </fieldset>
+            <!-- End of User Contact Block -->
+
+            <!-- User Message Block -->
+            <fieldset class="program-form__fieldset">
+              <legend class="program-form__legend">Комментарий</legend>
+              <div class="program-form__fieldset-inner">
+                <div class="program-form__input-wrapper">
+                  <textarea class="program-form__textarea" id="user-message" name="user-message"
+                    placeholder="Расскажите обо всех повадках кота"></textarea>
+                </div>
+              </div>
+            </fieldset>
+            <!-- End of User Message Block -->
+
+            <!-- Extra Chooser Block -->
+            <fieldset class="program-form__fieldset">
+              <legend class="program-form__legend">Дополнительно</legend>
+              <div class="program-form__fieldset-inner">
+                <div class="program-form__input-wrapper">
+                  <input class="program-form__input program-form__input--checkbox" type="checkbox" id="extra-sweetener"
+                    name="extra" value="sweetener" checked>
+                  <label class="program-form__label" for="extra-sweetener">Сахарозаменитель</label>
+                </div>
+                <div class="program-form__input-wrapper">
+                  <input class="program-form__input program-form__input--checkbox" type="checkbox" id="extra-water"
+                    name="extra" value="water">
+                  <label class="program-form__label" for="extra-water">Питьевая вода</label>
+                </div>
+                <div class="program-form__input-wrapper">
+                  <input class="program-form__input program-form__input--checkbox" type="checkbox" id="extra-milk"
+                    name="extra" value="milk">
+                  <label class="program-form__label" for="extra-milk">Молоко</label>
+                </div>
+                <div class="program-form__input-wrapper">
+                  <input class="program-form__input program-form__input--checkbox" type="checkbox" id="extra-vitamins"
+                    name="extra" value="vitamins">
+                  <label class="program-form__label" for="extra-vitamins">Витамины</label>
+                </div>
+              </div>
+            </fieldset>
+            <!-- End of Extra Chooser Block -->
+
+            <div class="program-from__submit-wrapper">
+              <button class="program-form__submit button button--primary" type="submit">Отправить заявку</button>
+              <p class="program-form__required-text">
+                * — Обязательные поля
+              </p>
+            </div>
+          </form>
+          <!-- End of Form block -->
+
+        </div>
+      </div>
+    </section>
+    <!-- End of Program Form section -->
 
   </main>
   <!-- End of Main Content -->
