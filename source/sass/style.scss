@@ -14,6 +14,7 @@
 @import "global/main-header";
 @import "global/main-footer";
 @import "global/section-header";
+@import "global/stripe-header";
 
 /* === Function Elements === */
 @import "global/buttons";
@@ -30,6 +31,8 @@
 @import "blocks/socials";
 @import "blocks/catalog";
 @import "blocks/product-card";
+@import "blocks/extra-products";
+@import "blocks/gift";
 
 // Main Footer sections
 @import "blocks/contact";
