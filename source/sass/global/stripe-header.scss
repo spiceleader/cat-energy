@@ -1,0 +1,50 @@
+.stripe-header {
+  position: relative;
+  display: block;
+  width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 14px;
+    right: 0;
+    width: 100%;
+    height: 3px;
+    margin-right: -20px;
+    background-color: $green-primary;
+    z-index: -1;
+  }
+
+  @media ($tablet) {
+    position: static;
+
+    &::after {
+      width: 100%;
+      top: 19px;
+      margin: 0;
+    }
+  }
+}
+
+.stripe-header__title {
+  display: inline-block;
+  font-size: $font-size-xm;
+  font-family: font-family(oswald);
+  font-weight: font-weight(regular);
+  line-height: $line-height-xm;
+  color: $font-color-heading;
+  margin: 0;
+  padding: 0;
+  padding-right: 25px;
+  background-color: $bg-color-body;
+
+  @media ($tablet) {
+    font-size: $font-size-xl;
+    line-height: $line-height-l;
+    padding: 0 37px;
+  }
+
+  @media ($desktop) {
+    padding: 0 40px;
+  }
+}
