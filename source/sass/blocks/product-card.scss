@@ -142,7 +142,10 @@
 
 .product-card__order {
   width: 100%;
-  padding: 0 37px;
+
+  @media ($tablet) {
+    padding: 0 37px;
+  }
 }
 
 .product-card__order--btn {
