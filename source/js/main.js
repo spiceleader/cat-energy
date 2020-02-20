@@ -24,6 +24,43 @@ if (toggleButton) {
   });
 }
 
+let submitted = false;
+
+// On submit, run evaluation and prevent if necessary
+const form = document.querySelector('.program-form__form');
+form.onsubmit = () => {
+  submitted = true;
+  setTimeout(() => {
+    submitted = false;
+  }, 0);
+};
+
+// Iterate over fields in form
+let invalidOnSubmit = false;
+for (const field of form.querySelectorAll('input, textarea, select')) {
+
+  // Show message on `invalid` event
+  field.oninvalid = () => {
+    if (submitted && !invalidOnSubmit) {
+      invalidOnSubmit = true;
+      setTimeout(() => {
+        invalidOnSubmit = false;
+      }, 1000);
+
+      field.focus();
+    }
+
+    field.classList.add('program-form__input--error');
+
+    // Reset invalid state & error message on `input` event, trigger validation check
+    const inputHandler = () => {
+      field.classList.remove('program-form__input--error');
+      field.checkValidity();
+    };
+    field.oninput = inputHandler;
+  };
+}
+
 // Image Compare
 (function () {
 
