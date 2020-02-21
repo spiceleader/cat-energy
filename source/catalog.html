@@ -658,6 +658,7 @@
     <!-- Map section -->
     <section class="map">
       <h2 class="visually-hidden">Как нас найти на карте</h2>
+      <div class="map__google" id="map__google"></div>
       <div class="map__image-wrapper">
         <picture>
           <source type="image/webp" media="(min-width: 1300px)"
@@ -731,6 +732,9 @@
   <script src="js/picturefill.min.js"></script>
   <script src="js/polyfill.min.js"></script>
   <script src="js/main.min.js"></script>
+  <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAK2jHhmvhUXmL9p3irD_YoJ1tt6RH-t9g&callback=initMap">
+    </script>
   <!-- End of Scripts -->
 </body>
 

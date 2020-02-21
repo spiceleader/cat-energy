@@ -24,45 +24,99 @@ if (toggleButton) {
   });
 }
 
-let submitted = false;
+// Error Input Style Handler
+if (document.querySelector('.program-form__form')) {
+  inputErrorHandler();
+}
 
-// On submit, run evaluation and prevent if necessary
-const form = document.querySelector('.program-form__form');
-form.onsubmit = () => {
-  submitted = true;
-  setTimeout(() => {
-    submitted = false;
-  }, 0);
-};
+function inputErrorHandler() {
+  let submitted = false;
 
-// Iterate over fields in form
-let invalidOnSubmit = false;
-for (const field of form.querySelectorAll('input, textarea, select')) {
-
-  // Show message on `invalid` event
-  field.oninvalid = () => {
-    if (submitted && !invalidOnSubmit) {
-      invalidOnSubmit = true;
-      setTimeout(() => {
-        invalidOnSubmit = false;
-      }, 1000);
-
-      field.focus();
-    }
-
-    field.classList.add('program-form__input--error');
-
-    // Reset invalid state & error message on `input` event, trigger validation check
-    const inputHandler = () => {
-      field.classList.remove('program-form__input--error');
-      field.checkValidity();
-    };
-    field.oninput = inputHandler;
+  // On submit, run evaluation and prevent if necessary
+  const form = document.querySelector('.program-form__form');
+  form.onsubmit = () => {
+    submitted = true;
+    setTimeout(() => {
+      submitted = false;
+    }, 0);
   };
+
+  // Iterate over fields in form
+  let invalidOnSubmit = false;
+  for (const field of form.querySelectorAll('input, textarea, select')) {
+
+    // Show message on `invalid` event
+    field.oninvalid = () => {
+      if (submitted && !invalidOnSubmit) {
+        invalidOnSubmit = true;
+        setTimeout(() => {
+          invalidOnSubmit = false;
+        }, 1000);
+
+        field.focus();
+      }
+
+      field.classList.add('program-form__input--error');
+
+      // Reset invalid state & error message on `input` event, trigger validation check
+      const inputHandler = () => {
+        field.classList.remove('program-form__input--error');
+        field.checkValidity();
+      };
+      field.oninput = inputHandler;
+    };
+  }
+}
+
+// Google Map API
+function initMap() {
+
+  // Defining map position and marker size
+  let viewport = document.documentElement.clientWidth || window.innerWidth;
+  let mapCenter = viewport < 1300 ? { lat: 59.938882, lng: 30.32323 } : { lat: 59.939065, lng: 30.319335 };
+  let markerCenter = viewport < 768 ? { lat: 59.93871, lng: 30.32323 } : { lat: 59.93871, lng: 30.32299 };
+  let smallMarker = { width: 62, height: 53 };
+  let bigMarker = { width: 124, height: 106 };
+  let markerSize = viewport < 768 ? smallMarker : bigMarker;
+
+  // Map option
+  let option = {
+    zoom: 17,
+    center: mapCenter,
+    mapTypeControl: false,
+    zoomControl: true,
+    scrollwheel: false,
+    zoomControlOptions: {
+      position: google.maps.ControlPosition.LEFT_TOP
+    },
+    streetViewControl: false,
+  };
+
+  // Adding Map to DOM
+  let map = new google.maps.Map(document.getElementById('map__google'), option);
+
+  // Marker Option
+  let marker = {
+    url: 'img/map-pin.png',
+    scaledSize: markerSize
+  };
+
+  // Adding Marker
+  var mapMarker = new google.maps.Marker({
+    position: markerCenter,
+    animation: google.maps.Animation.DROP,
+    map: map,
+    optimized: true,
+    icon: marker
+  });
 }
 
 // Image Compare
-(function () {
+if (document.querySelector('.compare__controls-slider')) {
+  imageCopare();
+}
+
+function imageCopare() {
 
   // Defining variables
   let controls = document.querySelector('.compare__controls');
@@ -173,4 +227,4 @@ for (const field of form.querySelectorAll('input, textarea, select')) {
   // Calling function on page load and window resize
   window.addEventListener('load', sliderInit);
   window.addEventListener('resize', sliderInit);
-})();
+}
