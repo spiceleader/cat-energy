@@ -344,7 +344,6 @@
   text-transform: uppercase;
   border: none;
   background-color: transparent;
-  outline: none;
 
   &::placeholder {
     color: $font-color-base;
@@ -487,7 +486,6 @@
   color: $font-color-base;
   text-transform: uppercase;
   padding: 14px 13px;
-  outline: none;
 
   &::placeholder {
     color: $font-color-base;
