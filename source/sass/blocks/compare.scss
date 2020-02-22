@@ -35,7 +35,7 @@
   }
 
   img {
-    max-width: unset;
+    max-width: none;
     display: block;
 
     @media ($tablet) {
