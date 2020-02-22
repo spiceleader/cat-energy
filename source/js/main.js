@@ -68,6 +68,7 @@ function inputErrorHandler() {
   }
 }
 
+/* eslint-disable */
 // Google Map API
 function initMap() {
 
@@ -110,6 +111,7 @@ function initMap() {
     icon: marker
   });
 }
+/* eslint-enable */
 
 // Image Compare
 if (document.querySelector('.compare__controls-slider')) {
