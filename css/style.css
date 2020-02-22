@@ -155,7 +155,8 @@ input[type="radio"].visually-hidden {
   font-family: oswald, arial, sans-serif;
   font-size: 14px;
   line-height: 18px;
-  transition: all 0.3s ease-in-out; }
+  transition: 0.3s ease-in-out;
+  transition-property: color, background; }
   @media (min-width: 768px) {
     .button {
       font-size: 20px;
@@ -306,7 +307,7 @@ input[type="radio"].visually-hidden {
     .site-nav__logo {
       width: 173px;
       height: 58px;
-      transition: all 0.3s ease-in-out; }
+      transition: opacity 0.3s ease-in-out; }
       .site-nav__logo--text {
         display: none; } }
   @media (min-width: 1300px) {
@@ -399,7 +400,7 @@ input[type="radio"].visually-hidden {
       font-weight: 400;
       padding: 14px 18px;
       color: #222222;
-      transition: all 0.3s ease-in-out; }
+      transition: color 0.3s ease-in-out; }
       .site-nav__item-link--current {
         position: relative; }
         .site-nav__item-link--current:hover, .site-nav__item-link--current:focus, .site-nav__item-link--current:active {
