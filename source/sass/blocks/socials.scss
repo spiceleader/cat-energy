@@ -39,6 +39,10 @@
   display: inline-block;
   padding: 20px;
 
+  .socials__svg {
+    transition: all 0.3s ease-out;
+  }
+
   &:hover,
   &:focus {
     .socials__svg {
@@ -48,6 +52,7 @@
 
   &:active {
     .socials__svg {
+      transition: none;
       fill: rgba($bg-color-icon--hover, 0.3);
     }
   }

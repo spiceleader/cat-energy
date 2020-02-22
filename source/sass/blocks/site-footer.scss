@@ -30,6 +30,7 @@
   display: inline-block;
   font-size: 0;
   line-height: 0;
+  transition: all 0.3s ease-in-out;
 
   &:hover,
   &:focus {
@@ -38,6 +39,7 @@
 
   &:active {
     opacity: 0.6;
+    transition: none;
   }
 
   @media ($tablet) {
@@ -80,6 +82,10 @@
   align-items: center;
   flex-flow: row nowrap;
 
+  .site-footer__developer-logo {
+    transition: all 0.3s ease-in-out;
+  }
+
   &:hover,
   &:focus {
     .site-footer__developer-logo {
@@ -90,6 +96,7 @@
   &:active {
     .site-footer__developer-logo {
       fill: rgba($bg-color-icon--hover, 0.3);
+      transition: none;
     }
 
     .site-footer__developer-text {
