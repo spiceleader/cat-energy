@@ -91,7 +91,7 @@
   }
 }
 
- // Removing input type number default arrows
+// Removing input type number default arrows
 /* Chrome, Safari, Edge, Opera */
 @mixin input-number-arrow-reset() {
   input::-webkit-outer-spin-button,
@@ -102,6 +102,13 @@
   /* Firefox */
   input[type="number"] {
     -moz-appearance: textfield;
+  }
+}
+
+// Removing clear 'X' button on inputs in IE
+@mixin remove-clear-button-ie() {
+  &::-ms-clear {
+    display: none;
   }
 }
 /* stylelint-enable */

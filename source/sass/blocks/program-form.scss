@@ -333,6 +333,8 @@
 @include input-number-arrow-reset;
 
 .program-form__input {
+  @include remove-clear-button-ie;
+
   font-family: font-family(oswald);
   font-weight: font-weight(regular);
   font-size: $font-size-s;
