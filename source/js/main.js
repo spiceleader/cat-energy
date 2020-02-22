@@ -129,12 +129,13 @@ function imageCopare() {
   let slideWrapper = document.querySelector('.compare__wrapper');
   let slideBefore = slideWrapper.querySelector('.compare__image-before');
   let slideAfter = slideWrapper.querySelector('.compare__image-after');
-  let sliderWidth,
-    fieldWidth;
+  let sliderWidth;
+  let fieldWidth;
 
   // Getting width of elements
   let getWidth = function (element) {
-    return parseInt(getComputedStyle(element).width, 10);
+    // return parseInt(getComputedStyle(element).width, 10);
+    return element.getBoundingClientRect().width;
   };
 
   // Changing slide width on before button click
