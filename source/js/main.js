@@ -43,28 +43,30 @@ function inputErrorHandler() {
 
   // Iterate over fields in form
   let invalidOnSubmit = false;
-  for (const field of form.querySelectorAll('input, textarea, select')) {
 
-    // Show message on `invalid` event
-    field.oninvalid = () => {
+  let field = form.querySelectorAll('input, textarea, select');
+  for (let i = 1; i < field.length; i++) {
+
+    Array.from(field, el => el.addEventListener('invalid', function () {
+
       if (submitted && !invalidOnSubmit) {
         invalidOnSubmit = true;
         setTimeout(() => {
           invalidOnSubmit = false;
         }, 1000);
 
-        field.focus();
+        el.focus();
       }
 
-      field.classList.add('program-form__input--error');
+      el.classList.add('program-form__input--error');
 
       // Reset invalid state & error message on `input` event, trigger validation check
       const inputHandler = () => {
-        field.classList.remove('program-form__input--error');
-        field.checkValidity();
+        el.classList.remove('program-form__input--error');
+        el.checkValidity();
       };
-      field.oninput = inputHandler;
-    };
+      el.oninput = inputHandler;
+    }));
   }
 }
 
@@ -103,7 +105,7 @@ function initMap() {
   };
 
   // Adding Marker
-  var mapMarker = new google.maps.Marker({
+  let mapMarker = new google.maps.Marker({
     position: markerCenter,
     animation: google.maps.Animation.DROP,
     map: map,
