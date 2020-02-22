@@ -34,7 +34,6 @@
   color: $font-color-strong;
 
   @media ($tablet) {
-    flex-basis: 37%;
     padding: 0;
     font-size: font-size(label-t);
     line-height: $line-height-xm;
