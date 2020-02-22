@@ -131,6 +131,19 @@
     height: 499px;
     bottom: 55px;
     margin-right: -118px;
+    animation: slideRight 1s;
+
+    @keyframes slideRight {
+      0% {
+        opacity: 0;
+        margin-right: -68px;
+      }
+
+      100% {
+        opacity: 1;
+        margin-right: -118px;
+      }
+    }
   }
 }
 
