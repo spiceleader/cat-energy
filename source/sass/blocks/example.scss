@@ -79,7 +79,7 @@
 .example__stats-item {
   width: 44%;
   display: flex;
-  flex-flow: column nowrap;
+  flex-flow: row wrap;
   justify-content: center;
   align-items: center;
   position: relative;
@@ -110,9 +110,9 @@
 
 .example__stats-def {
   position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translate(-50%, -35%);
+  bottom: 0;
+  right: 50%;
+  transform: translate(50%, 75%);
   font-size: font-size(light-m);
   line-height: font-lh(light-m);
   text-align: center;
@@ -123,9 +123,13 @@
     font-size: font-size(light-t);
     line-height: font-lh(light-t);
     padding: 0 5px;
-    transform: translate(0, -50%);
-    left: auto;
+    max-width: 90%;
+    transform: translate(50%, 50%);
     background-color: $bg-color-body;
+
+    br {
+      display: none;
+    }
   }
 
   @media ($desktop) {
