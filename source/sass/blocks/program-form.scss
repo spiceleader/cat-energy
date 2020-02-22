@@ -277,6 +277,7 @@
       border: 1px solid $border-color-input-checkers;
       width: 30px;
       height: 30px;
+      transition: all 0.3s ease-in-out;
     }
 
     &:hover,
@@ -319,6 +320,7 @@
   transform: translateY(-50%);
   z-index: -1;
   fill: $font-color-label;
+  transition: all 0.3s ease-in-out;
 
   &--mail {
     right: 16px;
@@ -332,8 +334,10 @@
 @include chrome-input-bg-fix;
 @include input-number-arrow-reset;
 
-input:required:invalid {
-  outline: none;
+@media all and (-ms-high-contrast: none), (-ms-high-contrast: active) {
+  input:required:invalid {
+    outline: none;
+  }
 }
 
 .program-form__input {
@@ -358,7 +362,7 @@ input:required:invalid {
     min-height: 52px;
     padding: 11px 15px;
     box-shadow: inset 0 0 0 1px $border-color-input;
-    transition: box-shadow 0.3s ease;
+    transition: all 0.3s ease-in-out;
 
     &:hover {
       box-shadow: inset 0 0 0 1px $border-color-input--hover;
@@ -440,7 +444,8 @@ input:required:invalid {
     }
     /* stylelint-enable */
 
-    &:focus {
+    &:focus,
+    &:hover {
       box-shadow: inset 0 0 0 2px $border-color-input--error;
 
       & ~ .program-form__svg {
@@ -506,6 +511,7 @@ input:required:invalid {
   @media ($tablet) {
     font-size: $font-size-m;
     line-height: 30px;
+    transition: all 0.3s ease-in-out;
   }
 
   @media ($desktop) {
