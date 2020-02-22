@@ -82,7 +82,7 @@
   @media ($tablet) {
     width: 173px;
     height: 58px;
-    transition: all 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 
     &--text {
       display: none;
@@ -226,7 +226,7 @@
     font-weight: font-weight(regular);
     padding: 14px 18px;
     color: $font-color-menu--tablet;
-    transition: all 0.3s ease-in-out;
+    transition: color 0.3s ease-in-out;
 
     &--current {
       position: relative;
