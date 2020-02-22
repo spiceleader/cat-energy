@@ -332,6 +332,10 @@
 @include chrome-input-bg-fix;
 @include input-number-arrow-reset;
 
+input:required:invalid {
+  outline: none;
+}
+
 .program-form__input {
   @include remove-clear-button-ie;
 
