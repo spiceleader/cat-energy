@@ -2,11 +2,11 @@
 
 [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
-Project based on this [Gulp template](https://github.com/spiceleader/startup-gulp-template#readme)
+Project based on this [Gulp template](https://github.com/embyth/startup-gulp-template#readme)
 
-Code by: [Rostyslav Miniukov](https://github.com/spiceleader/)
+Code by: [Rostyslav Miniukov](https://github.com/embyth/)
 
-[Project Demo](https://spiceleader.github.io/cat-energy/)
+[Project Demo](https://embyth.github.io/cat-energy/)
 
 ---
 
@@ -54,7 +54,7 @@ Code by: [Rostyslav Miniukov](https://github.com/spiceleader/)
 └── README.md         # project documents
 ```
 
-[travis-image]: https://travis-ci.org/spiceleader/cat-energy.svg?branch=master
-[travis-url]: https://travis-ci.org/spiceleader/cat-energy
-[dependency-image]: https://david-dm.org/spiceleader/cat-energy/dev-status.svg?style=flat-square
-[dependency-url]: https://david-dm.org/spiceleader/cat-energy?type=dev
+[travis-image]: https://travis-ci.org/embyth/cat-energy.svg?branch=master
+[travis-url]: https://travis-ci.org/embyth/cat-energy
+[dependency-image]: https://david-dm.org/embyth/cat-energy/dev-status.svg?style=flat-square
+[dependency-url]: https://david-dm.org/embyth/cat-energy?type=dev
