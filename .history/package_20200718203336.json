@@ -15,14 +15,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/embyth/cat-energy.git"
+    "url": "git+ssh://git@github.com/spiceleader/cat-energy.git"
   },
-  "author": "Rostyslav Miniukov <miniukovrostyslav@gmail.com> (https://github.com/embyth)",
+  "author": "Rostyslav Miniukov <miniukovrostyslav@gmail.com> (https://github.com/spiceleader)",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/embyth/cat-energy/issues"
+    "url": "https://github.com/spiceleader/cat-energy/issues"
   },
-  "homepage": "https://github.com/embyth/cat-energy#readme",
+  "homepage": "https://github.com/spiceleader/cat-energy#readme",
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
