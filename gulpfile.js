@@ -49,15 +49,15 @@ const isProd = !!process.env.NODE_ENV;
 gulp.task('styles', function () {
   return gulp.src('./source/sass/style.scss')
     .pipe(plumber())
-    .pipe(sourcemap.init())
+    .pipe(gulpif(isDev, sourcemap.init()))
     .pipe(sass().on('error', sass.logError))
     .pipe(postcss([
-      autoprefixer({ grid: true })
+      autoprefixer()
     ]))
     .pipe(gulp.dest('./build/css'))
-    .pipe(csso())
-    .pipe(rename({ suffix: '.min' }))
+    .pipe(csso({ forceMediaMerge: true, comments: false }))
     .pipe(gulpif(isDev, sourcemap.write('.')))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest('./build/css'))
     .pipe(gulpif(isDev, browserSync.stream()));
 });
@@ -68,8 +68,11 @@ gulp.task('scripts', function () {
     './source/js/**/*.js', // JS libraries
     './source/js/main.js', // Custom scripts. Always at the end
   ])
-    .pipe(sourcemap.init())
-    .pipe(babel())
+    .pipe(gulpif(isDev, sourcemap.init()))
+    .pipe(babel({
+      presets: ['@babel/env']
+    }))
+    .pipe(gulp.dest('./build/js'))
     .pipe(concat('main.js'))
     .pipe(terser()) // Minify js (opt.)
     .pipe(rename({ suffix: '.min' }))
